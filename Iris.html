@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>D3 Example</title>
-    <script src="d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.0/d3.min.js"></script>
 
     <style>
         circle {
@@ -11,6 +11,7 @@
           stroke-width: 1px;
         }
       </style>
+
   </head>
   <body>
 
@@ -39,6 +40,9 @@
          rScale.domain(d3.extent(data, function (d){ return d[rColumn]; }));
 
          var circles = svg.selectAll("circle").data(data);
+         console.log(function (d){ return d[xColumn]; });
+         console.log(function (d){ return d[yColumn]; });
+         console.log(function (d){ return d[rColumn]; });
          circles.enter().append("circle")
 
       .attr("cx", function(d){ return xScale(d[xColumn]); })
@@ -58,7 +62,7 @@
          return d;
        }
 
-       d3.csv("iris.csv", type, render);
+       d3.csv("Iris.csv", type, render);
 
     </script>
 
