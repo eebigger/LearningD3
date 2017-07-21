@@ -1,2 +1,3 @@
 # LearningD3
-Learning D3js
+
+A repo to track my learning and experiments.
